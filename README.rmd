@@ -7,7 +7,9 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-"
+  fig.path = "man/figures/README-",
+  fig.height = 2,
+  fig.width = 3
 )
 ```
 
@@ -18,24 +20,44 @@ knitr::opts_chunk$set(
 
 [![Build Status](https://travis-ci.com/johnmackintosh/rockthemes.svg?branch=main)](https://travis-ci.com/johnmackintosh/rockthemes)
   
-![R-CMD-check](https://github.com/johnmackintosh/rockthemes/workflows/R-CMD-check/badge.svg)
-
 ![Render README](https://github.com/johnmackintosh/rockthemes/workflows/Render%20README/badge.svg)
 
-![pkgdown](https://github.com/johnmackintosh/metallicaRt/workflows/pkgdown/badge.svg)
+![pkgdown](https://github.com/johnmackintosh/rockthemes/workflows/pkgdown/badge.svg)
 
-  <!-- badges: end -->
+[![R build status](https://github.com/johnmackintosh/rockthemes/workflows/R-CMD-check/badge.svg)](https://github.com/johnmackintosh/rockthemes/actions)
+<!-- badges: end -->
 
 ## What?
 
 This is a collection of colour palettes based on classic rock album covers.
 
-Not all of the artists are 'rock', but they appeared in lists of classic rock album covers and the internet is never wrong.
+Not all of the artists are 'rock', but they appeared in lists of classic rock album covers and the internet is never wrong, is it ;)
 
-The albums were chosen  either for their striking covers (in terms of colour), or simply, because
-they are bona fide rock classics. 
+Other albums were chosen  either for their striking covers (in terms of colour), because they are bona fide rock classics, or just because I like them. 
 
-Your job is to guess which is which.
+Featuring: 
+
+- Dirt (Alice In Chains, submission by G Hutson)
+- Californication (Red Hot Chili Peppers)
+- Blue Train (John Coltrane)
+- Facelift (Alice In Chains)
+- Groove is in the Heart (Deee-Lite, submitted by R Wilson)
+- Electric (The Cult)
+- To Bring You My Love - P J Harvey
+- The Magician's Birthday - Uriah Heep
+- Hell Awaits (Slayer - submission by C Beeley)
+- Warehouse Songs and Stories (Husker Du)
+- Dirty Computer (Janelle Monae)
+- Melloncollie and the Infinite Sadness (Smashing Pumpkins, submission by C Mainey)
+- Bitches Brew (Miles Davis)
+- Simulation Theory (Muse)
+- Tragic Kingdom (No Doubt)
+- Peace Sells (Megadeth, submission by C Beeley)
+- The 2ND Law (Muse, submission by G Hutson)
+- Siamese Dream (Smashing Pumpkins, submission by C Mainey)
+- The Real Thing (Faith No More)
+- 1989 (Taylor Swift)
+- Celebration Day (Led Zeppelin, submission by G Hutson)
 
 
 ## Why?
@@ -47,7 +69,7 @@ Because [this repo of Metallica inspired palettes](https://github.com/johnmackin
 
 This will probably not go to CRAN, so please install using the remotes package.
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 #library(remotes)
 #remotes::install_github("johnmackintosh/rockthemes")
 library(rockthemes)
@@ -60,325 +82,223 @@ library(gapminder)
 # Palettes and Themes
 
 
-## Californication
-
-Inspiration
-
-# <img src="man/figures/californication.png" width="160px" align="left" />
-
-```{r}
+```{r californication, fig.show = "hold",out.width = "33%"}
+rock_palette("alice")
 rock_palette("californication")
-
-```
-
-
-## Coltrane
-
-Inspiration
-
-# <img src="man/figures/coltrane.png" width="160px" align="left" />
-
-```{r}
 rock_palette("coltrane")
-
 ```
 
 
-## Electric
 
-Inspiration
-
-# <img src="man/figures/electric.png" width="160px" align="left" />
-
-```{r}
+```{r electric, fig.show = "hold",out.width = "33%"}
+rock_palette("deelite")
 rock_palette("electric")
+rock_palette("facelift")
 ```
 
 
-##  Faith No More
 
-Inspiration
-
-# <img src="man/figures/realthing.png" width="160px" align="left" />
-
-```{r}
+```{r gnr, fig.show = "hold",out.width = "33%"}
 rock_palette("faithnomore")
-
-```
-
-
-## Go Gos
-
-Inspiration
-
-# <img src="man/figures/gogos.png" width="160px" align="left" />
-
-```{r}
-rock_palette("gogo")
-
-```
-
-
-
-## Guns N' Roses
-
-Inspiration
-
-# <img src="man/figures/gunsnroses.png" width="160px" align="left" />
-
-```{r}
-rock_palette("gunsnroses")
-```
-
-
-## PJ Harvey
-
-Inspiration
-
-# <img src="man/figures/harvey.png" width="160px" align="left" />
-
-```{r}
 rock_palette("harvey")
+rock_palette("heep")
 ```
 
 
-## Uria Heep
 
-Inspiration
-
-# <img src="man/figures/heep.png" width="160px" align="left" />
-
-```{r}
-rock_palette("heap")
-```
-
-
-## Husker Du
-
-Inspiration
-
-# <img src="man/figures/husker.png" width="160px" align="left" />
-
-```{r}
+```{r slayer, fig.show = "hold",out.width = "33%"}
+rock_palette("hellawaits")
 rock_palette("husker")
-```
-
-
-
-## Janelle Monae
-
-Inspiration
-
-# <img src="man/figures/janelle.png" width="160px" align="left" />
-
-```{r}
 rock_palette("janelle")
 ```
 
 
-## Iron Maiden
 
-Inspiration
-
-# <img src="man/figures/maiden.png" width="160px" align="left" />
-
-```{r}
-rock_palette("maiden")
-```
-
-
-## Metallica 
-
-Inspiration
-
-# <img src="man/figures/metallica.png" width="160px" align="left" />
-
-```{r}
-rock_palette("metallica")
-```
-
-## Miles Davis
-
-Inspiration
-
-# <img src="man/figures/miles.png" width="160px" align="left" />
-
-```{r}
+```{r maiden, fig.show = "hold",out.width = "33%"}
+rock_palette("melloncollie")
 rock_palette("miles")
-```
-
-
-## Muse
-
-Inspiration
-
-# <img src="man/figures/muse.png" width="160px" align="left" />
-
-```{r}
 rock_palette("muse")
 ```
 
 
-## Nirvana 
 
-Inspiration
-
-# <img src="man/figures/nirvana.png" width="160px" align="left" />
-
-```{r}
-rock_palette("nevermind")
-```
-
-
-## No Doubt
-
-Inspiration
-
-# <img src="man/figures/nodoubt.png" width="160px" align="left" />
-
-```{r}
+```{r muse, fig.show = "hold",out.width = "33%"}
 rock_palette("nodoubt")
+rock_palette("peacesells")
+rock_palette("secondlaw")
 ```
 
 
-## Oasis
 
-Inspiration
-
-# <img src="man/figures/oasis.png" width="160px" align="left" />
-
-```{r}
-rock_palette("oasis")
-```
-
-
-## Taylor Swift
-
-Inspiration
-
-# <img src="man/figures/taylor.png" width="160px" align="left" />
-
-```{r}
+```{r swift,  fig.show = "hold",out.width = "33%"}
+rock_palette("siamesedream")
 rock_palette("swift")
+rock_palette("zeppelin")
 ```
 
-
-##  10CC
-
-
-Inspiration
-
-# <img src="man/figures/tencc.png" width="160px" align="left" />
-
-```{r}
-rock_palette("tencc")
-```
 
 
 ## Longer colour palettes, more suited for ggplot2 use
 
 The following palettes share the same inspirations, but there are more colours, which hopefully increases their utility for data visualisation.
 
-```{r}
-show_col(californication_pal()(10))
-
-```
-
-```{r}
-show_col(coltrane_pal()(10))
-
-```
-
-```{r}
-show_col(electric_pal()(10))
-
-```
+```{r, fig.width=4, fig.height=3, echo = FALSE, fig.show = "hold", out.width = "25%"}
+data <- gapminder::gapminder %>% 
+    filter(country %in% c("France", "Germany", "Ireland", "Italy", 
+                        "Japan", "Norway", "Belarus", "United Kingdom",
+                        "Peru", "Spain"))  %>% 
+    mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
 
 
-```{r}
-show_col(gogo_pal()(10))
 
-```
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_californication() + 
+    ggtitle(label = "scale_fill_californication")  
 
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_coltrane() + 
+    ggtitle(label = "scale_fill_coltrane")  
 
-```{r}
-show_col(gunsnroses_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_deelite() + 
+    ggtitle(label = "scale_fill_deelite") 
 
-```
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_dirt() + 
+    ggtitle(label = "scale_fill_dirt") 
 
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_electric() + 
+    ggtitle(label = "scale_fill_electric")  
 
-```{r}
-show_col(harvey_pal()(10))
-
-```
-
-```{r}
-show_col(heap_pal()(10))
-
-```
-
-
-```{r}
-show_col(husker_pal()(10))
-
-```
-
-```{r}
-show_col(janelle_pal()(10))
-
-```
-
-
-```{r}
-show_col(maiden_pal()(10))
-
-```
-
-
-```{r}
-show_col(metallica_pal()(10))
-
-```
-
-```{r}
-show_col(miles_pal()(10))
-
-```
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_facelift() + 
+    ggtitle(label = "scale_fill_facelift")  
 
 
-```{r}
-show_col(muse_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_harvey() + 
+    ggtitle(label = "scale_fill_harvey")  
 
-```
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_heep() + 
+    ggtitle(label = "scale_fill_heep")  
 
-```{r}
-show_col(nevermind_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_hellawaits() + 
+    ggtitle(label = "scale_fill_hellawaits")  
 
-```
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_husker() + 
+    ggtitle(label = "scale_fill_husker")
 
-```{r}
-show_col(nodoubt_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_janelle() + 
+    ggtitle(label = "scale_fill_janelle")
 
-```
 
-```{r}
-show_col(oasis_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_melloncollie() + 
+    ggtitle(label = "scale_fill_melloncollie")
 
-```
 
-```{r}
-show_col(real_thing_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_muse() + 
+    ggtitle(label = "scale_fill_muse")
 
-```
 
-```{r}
-show_col(taylor_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_nodoubt() + 
+    ggtitle(label = "scale_fill_nodoubt")
+  
 
-```
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_peacesells() + 
+    ggtitle(label = "scale_fill_peacesells")
 
-```{r}
-show_col(tencc_pal()(10))
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_real_thing() + 
+    ggtitle(label = "scale_fill_realthing")
 
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_siamesedream() + 
+    ggtitle(label = "scale_fill_siamesedream")
+
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_second_law() + 
+    ggtitle(label = "scale_fill_second_law")
+
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_taylor() + 
+    ggtitle(label = "scale_fill_taylor")
+
+ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
+    geom_area(alpha = 0.8) +
+    theme_void() + 
+    theme(legend.position = "none") + 
+    scale_fill_ledzep() + 
+    ggtitle(label = "scale_fill_ledzep")
+    
+    
 ```
 
 
@@ -389,58 +309,13 @@ show_col(tencc_pal()(10))
 
 ## Code of Conduct
 
-Please note that the rockthemes project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). 
+Please note that the rockthemes project is released with a
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
+project you agree to abide by its terms. 
 
-By contributing to this project, you agree to abide by its terms.
 
 
 ## Contributing
 
-PR's are welcome, if you feel there is a glaring omission.
+See the [Contribution guide](.github/CONTRIBUTING.md)
 
-Please include an image of the album cover, relevant code. 
-
-Please try to keep artists / albums in chronological order in the readme.
-
-Don't forget to update the name param of the rock_palette function
-
-
-## More ggplot2 examples
-
-```{r}
-data <- gapminder::gapminder %>% 
-    filter(country %in% c("France", "Germany", "Ireland", "Italy", "Japan")) %>% 
-    mutate(year = as.Date(paste(year, "-01-01", sep = "", format = '%Y-%b-%d')))
-    
-ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-    geom_area(alpha = 0.8) +
-    scale_x_date(breaks = data$year, date_labels = "%Y") +
-    scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-    scale_fill_tencc()
-    
-    ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-    geom_area(alpha = 0.8) +
-    scale_x_date(breaks = data$year, date_labels = "%Y") +
-    scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-    scale_fill_husker()
-    
-    
-    ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-    geom_area(alpha = 0.8) +
-    scale_x_date(breaks = data$year, date_labels = "%Y") +
-    scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-    scale_fill_janelle()
-  
-    ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-    geom_area(alpha = 0.8) +
-    scale_x_date(breaks = data$year, date_labels = "%Y") +
-    scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-    scale_fill_muse()
-    
-    ggplot(data = data, aes(x = year, y = gdpPercap, fill = country)) +
-    geom_area(alpha = 0.8) +
-    scale_x_date(breaks = data$year, date_labels = "%Y") +
-    scale_y_continuous(expand = c(0, 0), labels = scales::dollar) +
-    scale_fill_nodoubt()
-    
-```
